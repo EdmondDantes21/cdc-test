@@ -5,3 +5,4 @@ metadata:
   namespace: {{ .Release.Namespace }}
 data:
   {{- toYaml .Values.gitops | nindent 2 }}
+  chartVersion: {{ .Chart.Version | quote }}

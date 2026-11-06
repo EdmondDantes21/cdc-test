@@ -1,4 +1,4 @@
-apiVersion: composition.krateo.io/v1-0-0
+apiVersion: composition.krateo.io/v2-0-0
 kind: CdcTest
 metadata:
   name: cdc-test
