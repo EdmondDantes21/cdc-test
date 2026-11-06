@@ -1,0 +1,10 @@
+apiVersion: core.krateo.io/v1alpha1
+kind: CompositionDefinition
+metadata:
+  name: cdc-test
+  namespace: krateo-system
+spec:
+  chart:
+    repo: cdc-test
+    url: oci://ghcr.io/edmonddantes21/cdc-test
+    version: "1.0.0"

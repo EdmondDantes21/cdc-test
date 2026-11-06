@@ -1,0 +1,10 @@
+apiVersion: composition.krateo.io/v1-0-0
+kind: CdcTest
+metadata:
+  name: cdc-test
+  namespace: krateo-system
+spec:
+  gitops:
+    repoName: demo-app
+    branch: main
+    environment: dev
