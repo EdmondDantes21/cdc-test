@@ -1,0 +1,15 @@
+# A non-hook Job, so the CDC's generated RBAC covers jobs and the pre-upgrade hook can run.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-noop
+  namespace: {{ .Release.Namespace }}
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: noop
+          image: busybox:1.36
+          command: ["true"]
